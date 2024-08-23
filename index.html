@@ -21,7 +21,7 @@
       <img id="1_couloir_3" src="assets/cepegra/1_couloir_3.jpg" preload crossorigin></img>
       <img id="1_hall" src="assets/cepegra/1_hall.jpg" preload crossorigin></img>
       <img id="1_passerelle" src="assets/cepegra/1_passerelle.JPG" preload crossorigin></img>
-      <img id="2_hall" src="assets/cepegra/1_passerelle.JPG" preload crossorigin></img>
+      <img id="2_hall" src="assets/cepegra/2_hall.jpg" preload crossorigin></img>
 
       <a-mixin
           id="viewsphere"
@@ -132,7 +132,7 @@
           <a-entity
             mixin="marker"
             event-set__hideview="_event: mousedown; _target:#view_5; position:0 -100 0;"
-            event-set__showview="_event: mousedown; _target:#view_8; position:0 0 0;" 
+            event-set__showview="_event: mousedown; _target:#view_10; position:0 0 0;" 
             event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
           >
             </a-entity>
@@ -186,6 +186,15 @@
       >
         </a-entity>
     </a-entity>
+    <a-entity position="0 0 0" rotation="-15 300 0">
+      <a-entity
+        mixin="marker"
+        event-set__hideview="_event: mousedown; _target:#view_7; position:0 -100 0;"
+        event-set__showview="_event: mousedown; _target:#view_9; position:0 0 0;" 
+        event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+      >
+        </a-entity>
+    </a-entity>
     <a-entity position="0 0 0" rotation="5 -26 0">
       <a-entity
         mixin="marker"
@@ -197,17 +206,51 @@
     </a-entity>
 </a-entity>
 <a-entity id="view_8" mixin="viewsphere" material="src: #1_passerelle;" sound="src: #demosound2;" autoplaysound>
-  <a-entity position="0 0 0" rotation="5 290 0">
+  <a-entity position="0 0 0" rotation="5 295 0">
     <a-entity
       mixin="marker"
       event-set__hideview="_event: mousedown; _target:#view_8; position:0 -100 0;"
-      event-set__showview="_event: mousedown; _target:#view_5; position:0 0 0;" 
+      event-set__showview="_event: mousedown; _target:#view_10; position:0 0 0;" 
       event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
     >
       </a-entity>
   </a-entity>
 
 </a-entity>
+<a-entity id="view_9" mixin="viewsphere" material="src: #2_hall;" sound="src: #demosound2;" autoplaysound>
+  <a-entity position="0 0 0" rotation="30 295 0">
+    <a-entity
+      mixin="marker"
+      event-set__hideview="_event: mousedown; _target:#view_9; position:0 -100 0;"
+      event-set__showview="_event: mousedown; _target:#view_7; position:0 0 0;" 
+      event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+    >
+      </a-entity>
+  </a-entity>
+
+</a-entity>
+<a-entity id="view_10" mixin="viewsphere" material="src: #1_couloir_3;" sound="src: #demosound2;" autoplaysound>
+  <a-entity position="0 0 0" rotation="5 90 0">
+    <a-entity
+      mixin="marker"
+      event-set__hideview="_event: mousedown; _target:#view_10; position:0 -100 0;"
+      event-set__showview="_event: mousedown; _target:#view_5; position:0 0 0;" 
+      event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+    >
+      </a-entity>
+  </a-entity>
+  <a-entity position="0 0 0" rotation="5 270 0">
+    <a-entity
+      mixin="marker"
+      event-set__hideview="_event: mousedown; _target:#view_10; position:0 -100 0;"
+      event-set__showview="_event: mousedown; _target:#view_8; position:0 0 0;" 
+      event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+    >
+      </a-entity>
+  </a-entity>
+
+</a-entity>
+
 
 <!-- RIG -->
 <a-entity id="rig" rotation="0 0 0">
