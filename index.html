@@ -12,6 +12,7 @@
 <body>
   <a-scene renderer="antialias: true; colorManagement: true;" loading-screen="dotsColor: orange; backgroundColor: black">
     <a-assets>
+      <img id="rez_entree" src="assets/cepegra/rez_entree.JPG" preload crossorigin></img>
       <img id="rez_accueil" src="assets/cepegra/rez_accueil.jpg" preload crossorigin></img>
       <img id="rez_couloir_2" src="assets/cepegra/rez_couloir_2.JPG" preload crossorigin></img>
       <img id="rez_couloir_3" src="assets/cepegra/rez_couloir_3.jpg" preload crossorigin></img>
@@ -60,6 +61,15 @@
           mixin="marker"
           event-set__hideview="_event: mousedown; _target:#view_1; position:0 -100 0;"
           event-set__showview="_event: mousedown; _target:#view_7; position:0 0 0;" 
+          event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+        >
+        </a-entity>
+      </a-entity>
+      <a-entity position="0 0 0" rotation="5 275 0">
+        <a-entity
+          mixin="marker"
+          event-set__hideview="_event: mousedown; _target:#view_1; position:0 -100 0;"
+          event-set__showview="_event: mousedown; _target:#view_11; position:0 0 0;" 
           event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
         >
         </a-entity>
@@ -249,6 +259,17 @@
       </a-entity>
   </a-entity>
 
+</a-entity>
+<a-entity id="view_11" mixin="viewsphere" material="src: #rez_entree;" sound="src: #demosound2;" autoplaysound>
+  <a-entity position="0 0 0" rotation="5 275 0">
+    <a-entity
+      mixin="marker"
+      event-set__hideview="_event: mousedown; _target:#view_11; position:0 -100 0;"
+      event-set__showview="_event: mousedown; _target:#view_1; position:0 0 0;" 
+      event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+    >
+      </a-entity>
+  </a-entity>
 </a-entity>
 
 
