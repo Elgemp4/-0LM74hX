@@ -36,17 +36,28 @@
         <a-mixin
         id="marker" 
         position="0 0 10"
-        geometry="primitive: circle; radius:2"
+        geometry="primitive: circle; radius:.5"
         material="shader:flat; color:red; opacity:0.5;side:double;"
-        animation="property:geometry.radius; to:1.5; dur:1000; loop:true;dir:alternate;"
+        animation="property:geometry.radius; to:1; dur:1000; loop:true;dir:alternate;"
         event-set__enter="_event: mouseenter; scale:1.5 1.5 1.5;"
         event-set__leave="_event: mouseleave; scale:1 1 1;"
         ></a-mixin>
 
     </a-assets>
+    <a-entity id="view_11" mixin="viewsphere" material="src: #rez_entree;" sound="src: #demosound2;" position="0 0 0"  autoplaysound>
+      <a-entity position="0 0 0" rotation="5 275 0">
+        <a-entity
+          mixin="marker"
+          event-set__hideview="_event: mousedown; _target:#view_11; position:0 -100 0;"
+          event-set__showview="_event: mousedown; _target:#view_1; position:0 0 0;" 
+          event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
+        >
+          </a-entity>
+      </a-entity>
+    </a-entity>
 
     <!-- TEST -->
-    <a-entity id="view_1" mixin="viewsphere" material="src: #rez_accueil;" position="0 0 0" sound="src: #demosound1" autoplaysound>
+    <a-entity id="view_1" mixin="viewsphere" material="src: #rez_accueil;" position="0 -100 0" sound="src: #demosound1" autoplaysound>
       <a-entity position="0 0 0" rotation="5 0 0">
         <a-entity
           mixin="marker"
@@ -260,17 +271,7 @@
   </a-entity>
 
 </a-entity>
-<a-entity id="view_11" mixin="viewsphere" material="src: #rez_entree;" sound="src: #demosound2;" autoplaysound>
-  <a-entity position="0 0 0" rotation="5 275 0">
-    <a-entity
-      mixin="marker"
-      event-set__hideview="_event: mousedown; _target:#view_11; position:0 -100 0;"
-      event-set__showview="_event: mousedown; _target:#view_1; position:0 0 0;" 
-      event-set__orient="_event: mousedown; _target:#rig; rotation:0 -100 0;"
-    >
-      </a-entity>
-  </a-entity>
-</a-entity>
+
 
 
 <!-- RIG -->
